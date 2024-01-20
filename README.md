@@ -16,4 +16,5 @@
 - Jwt Auth
 - Booking CRUD and Search operations
 - Mail Sender
-
+- Scheduled Job
+- Docker Compose
