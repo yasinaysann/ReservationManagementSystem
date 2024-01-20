@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "68c269eb-7f66-4d9e-8a22-3eb3e5e9103d",
+		"name": "Ticket Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13995857"
+	},
+	"item": [
+		{
+			"name": "getBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book?checkOut=22.01.2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					],
+					"query": [
+						{
+							"key": "roomCode",
+							"value": "FAM",
+							"disabled": true
+						},
+						{
+							"key": "checkIn",
+							"value": "20.01.2024",
+							"disabled": true
+						},
+						{
+							"key": "checkOut",
+							"value": "22.01.2024"
+						},
+						{
+							"key": "rateCode",
+							"value": "AI",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"Yasin\",\n    \"lastName\":\"aysan\",\n    \"email\":\"deneme2@gmail.com\",\n    \"checkIn\":\"20.01.2024\",\n    \"checkOut\":\"22.01.2024\",\n    \"roomCode\":\"FAM\",\n    \"rateCode\":\"AI\",\n    \"totalPax\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"deneme\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"deneme\",\n    \"name\":\"yasin\",\n    \"surname\":\"aysan\",\n    \"email\":\"deneme@gmail.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"firstName\":\"Yasin\",\n    \"lastName\":\"Aysan\",\n    \"email\":\"deneme@gmail.com\",\n    \"checkIn\":\"20.01.2024\",\n    \"checkOut\":\"22.01.2024\",\n    \"roomCode\":\"FAM\",\n    \"rateCode\":\"AI\",\n    \"totalPax\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
